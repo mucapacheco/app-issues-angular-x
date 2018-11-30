@@ -7,6 +7,7 @@ import {LayoutsModule} from './components/common/layouts/layouts.module';
 import {AppviewsModule} from './views/appviews/appviews.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {DashboardsModule} from './views/dashboards/dashboards.module';
+import {IssueTrackerModule} from './views/issue-tracker/issue-tracker.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {DashboardsModule} from './views/dashboards/dashboards.module';
     LayoutsModule,
     AppviewsModule,
     DashboardsModule,
+    IssueTrackerModule,
     RouterModule.forRoot([
       {
         path: 'app',
@@ -25,6 +27,10 @@ import {DashboardsModule} from './views/dashboards/dashboards.module';
       {
         path: 'dashboards',
         loadChildren: './views/dashboards/dashboards.module#DashboardsModule'
+      },
+      {
+        path: 'issue-tracker',
+        loadChildren: './views/issue-tracker/issue-tracker.module#IssueTrackerModule'
       },
       {path: '**',  redirectTo: 'app/login'},
       {path: '', redirectTo: 'app/starterview', pathMatch: 'full'},

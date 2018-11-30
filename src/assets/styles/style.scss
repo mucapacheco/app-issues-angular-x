@@ -61,3 +61,106 @@
   width: 32px;
   height: 32px;
 }
+
+
+.icheckbox_square-green{display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:22px;height:22px;background:url(http://webapplayers.com/inspinia_admin-v2.8/css/plugins/iCheck/green.png) no-repeat;border:none;cursor:pointer;}
+.icheckbox_square-green{background-position:0 0;}
+.icheckbox_square-green.checked{background-position:-48px 0;}
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){
+  .icheckbox_square-green{background-image:url(http://webapplayers.com/inspinia_admin-v2.8/css/plugins/iCheck/green@2x.png);-webkit-background-size:240px 24px;background-size:240px 24px;}
+}
+
+.icheckbox_square-green{display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:22px;height:22px;background:url(http://webapplayers.com/inspinia_admin-v2.8/css/plugins/iCheck/green.png) no-repeat;border:none;cursor:pointer;}
+.icheckbox_square-green{background-position:0 0;}
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){
+  .icheckbox_square-green{background-image:url(http://webapplayers.com/inspinia_admin-v2.8/css/plugins/iCheck/green@2x.png);-webkit-background-size:240px 24px;background-size:240px 24px;}
+}
+
+/*! CSS Used from: http://webapplayers.com/inspinia_admin-v2.8/css/style.css */
+
+.i-checks{padding-left:0;}
+.table > tbody > tr > td{border-top:1px solid #e7eaec;line-height:1.42857;padding:8px;vertical-align:top;}
+table.table-mail tr td{padding:12px;}
+.table-mail .check-mail{padding-left:20px;}
+.table-mail .mail-date{padding-right:20px;}
+.check-mail{width:40px;}
+.read td a,.read td{font-weight:normal;color:inherit;}
+.mail-ontact{width:23%;}
+ins{background-color:#c6ffc6;text-decoration:none;}
+.float-right{float:right!important;}
+
+
+.read .label{font-size: 13px;}
+
+.label {
+  background-color: #d1dade;
+  color: #5e5e5e;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  padding: 3px 8px;
+  text-shadow: none;
+  border-radius: 0.25em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.nav .label,
+.ibox .label {
+  font-size: 10px;
+}
+.badge {
+  background-color: #d1dade;
+  color: #5e5e5e;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-shadow: none;
+  white-space: nowrap;
+}
+.label-primary,
+.badge-primary {
+  background-color: #1ab394;
+  color: #FFFFFF;
+}
+.label-success,
+.badge-success {
+  background-color: #1c84c6;
+  color: #FFFFFF;
+}
+.label-warning,
+.badge-warning {
+  background-color: #f8ac59;
+  color: #FFFFFF;
+}
+.label-warning-light,
+.badge-warning-light {
+  background-color: #f8ac59;
+  color: #ffffff;
+}
+.label-danger,
+.badge-danger {
+  background-color: #ed5565;
+  color: #FFFFFF;
+}
+.label-info,
+.badge-info {
+  background-color: #23c6c8;
+  color: #FFFFFF;
+}
+.label-inverse,
+.badge-inverse {
+  background-color: #262626;
+  color: #FFFFFF;
+}
+.label-white,
+.badge-white {
+  background-color: #FFFFFF;
+  color: #5E5E5E;
+}
+.label-white,
+.badge-disable {
+  background-color: #2A2E36;
+  color: #8B91A0;
+}

@@ -9,11 +9,11 @@ import {FlotChartDirective} from '../../components/charts/flotChart';
 declare var jQuery: any;
 
 @Component({
-  selector: 'dashboard1',
-  templateUrl: 'dashboard1.template.html'
+  selector: 'app-issue-list-box',
+  templateUrl: 'issue-list-box.template.html'
 })
 
-export class Dashboard1Component {
+export class IssueListBoxComponent {
 
 
   // Dounghunt chart
@@ -55,5 +55,8 @@ export class Dashboard1Component {
 
   public sparklineData: Array<any> = [5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7];
   public sparklineOptions: any = {type: 'bar', barWidth: 8, height: '150px', barColor: '#1ab394', negBarColor: '#c6c6c6'};
+
+  public peityType: string = 'pie';
+  public peityOptions: any = {fill: ['#1ab394', '#d7d7d7', '#ffffff']};
 
 }
