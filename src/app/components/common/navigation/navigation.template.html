@@ -25,7 +25,7 @@
       </li>
       <li [ngClass]="{active: activeRoute('issue-tracker')}">
         <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Issue Tracker</span> <span class="fa arrow"></span> </a>
-        <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('dashboards')}">
+        <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('issue-tracker')}">
           <li [ngClass]="{active: activeRoute('/issue-tracker/list')}"><a [routerLink]="['/issue-tracker/list']">Issue Tracker v.1</a></li>
           <li [ngClass]="{active: activeRoute('/issue-tracker/box')}"><a [routerLink]="['/issue-tracker/box']">Issue Tracker v.2</a></li>
         </ul>

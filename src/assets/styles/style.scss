@@ -62,6 +62,37 @@
   height: 32px;
 }
 
+.issue-tracker .btn-link {
+  color: #1ab394;
+}
+table.issue-tracker tbody tr td {
+  vertical-align: middle;
+  height: 50px;
+}
+.issue-info {
+  width: 50%;
+}
+.issue-info a {
+  font-weight: 600;
+  color: #676a6c;
+}
+.issue-info small {
+  display: block;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+
+/* TEAMS */
+.team-members {
+  margin: 10px 0;
+}
+.team-members img.rounded-circle {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 5px;
+}
+
 
 .icheckbox_square-green{display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:22px;height:22px;background:url(http://webapplayers.com/inspinia_admin-v2.8/css/plugins/iCheck/green.png) no-repeat;border:none;cursor:pointer;}
 .icheckbox_square-green{background-position:0 0;}
@@ -163,4 +194,8 @@ ins{background-color:#c6ffc6;text-decoration:none;}
 .badge-disable {
   background-color: #2A2E36;
   color: #8B91A0;
+}
+
+.ibox-content .m-t-sm{
+  display: flex;
 }
