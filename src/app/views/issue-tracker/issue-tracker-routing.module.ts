@@ -9,7 +9,7 @@ const routes: Routes = [{
   path: 'issue-tracker',
   component: BasicLayoutComponent,
   children: [
-    {path: '', component: IssueListComponent},
+    {path: 'list', component: IssueListComponent},
     {path: 'box', component: IssueListBoxComponent},
   ]
 }];

@@ -23,6 +23,13 @@
       <li [ngClass]="{active: activeRoute('starter')}">
         <a [routerLink]="['/app/starterview']"><i class="fa fa-th-large"></i> <span class="nav-label">Starter view</span></a>
       </li>
+      <li [ngClass]="{active: activeRoute('issue-tracker')}">
+        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Issue Tracker</span> <span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('dashboards')}">
+          <li [ngClass]="{active: activeRoute('/issue-tracker/list')}"><a [routerLink]="['/issue-tracker/list']">Issue Tracker v.1</a></li>
+          <li [ngClass]="{active: activeRoute('/issue-tracker/box')}"><a [routerLink]="['/issue-tracker/box']">Issue Tracker v.2</a></li>
+        </ul>
+      </li>
       <li [ngClass]="{active: activeRoute('dashboards')}">
         <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard examples</span> <span class="fa arrow"></span> </a>
         <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('dashboards')}">
