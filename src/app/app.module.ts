@@ -36,7 +36,7 @@ import {ProjectModule} from './views/project/project.module';
       },
       {
         path: 'projects',
-        loadChildren: './views/issue-tracker/project.module#ProjectModule'
+        loadChildren: './views/projects/project.module#ProjectModule'
       },
       {path: '**',  redirectTo: 'app/login'},
       {path: '', redirectTo: 'app/starterview', pathMatch: 'full'},

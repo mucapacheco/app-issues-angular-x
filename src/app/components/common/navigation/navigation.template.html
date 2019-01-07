@@ -30,6 +30,12 @@
           <li [ngClass]="{active: activeRoute('/issue-tracker/box')}"><a [routerLink]="['/issue-tracker/box']">Issue Tracker v.2</a></li>
         </ul>
       </li>
+      <li [ngClass]="{active: activeRoute('projects')}">
+        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Project</span> <span class="fa arrow"></span> </a>
+        <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('projects')}">
+          <li [ngClass]="{active: activeRoute('/projects/list')}"><a [routerLink]="['/projects/list']">Project Link</a></li>
+        </ul>
+      </li>
       <li [ngClass]="{active: activeRoute('dashboards')}">
         <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard examples</span> <span class="fa arrow"></span> </a>
         <ul class="nav nav-second-level collapse" [ngClass]="{in: activeRoute('dashboards')}">
