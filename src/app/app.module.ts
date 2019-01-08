@@ -9,6 +9,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {DashboardsModule} from './views/dashboards/dashboards.module';
 import {IssueTrackerModule} from './views/issue-tracker/issue-tracker.module';
 import {ProjectModule} from './views/project/project.module';
+import {ICheckModule} from './components/common/iCheck/iCheck.component';
 
 @NgModule({
   declarations: [

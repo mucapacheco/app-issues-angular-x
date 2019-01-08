@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {StarterViewComponent} from './starterview.component';
 import {LoginComponent} from './login.component';
 import {RegisterComponent} from './register.component';
+import {ICheckModule} from '../../components/common/iCheck/iCheck.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import {RegisterComponent} from './register.component';
     AppviewsRoutingModule,
     RouterModule,
     PeityModule,
-    SparklineModule
+    SparklineModule,
+    ICheckModule,
+
   ],
   declarations: [StarterViewComponent, LoginComponent, RegisterComponent],
   exports: [StarterViewComponent, LoginComponent, RegisterComponent]
