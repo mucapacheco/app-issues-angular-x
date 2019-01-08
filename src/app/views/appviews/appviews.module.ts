@@ -7,6 +7,7 @@ import {PeityModule} from '../../components/charts/peity';
 import {RouterModule} from '@angular/router';
 import {StarterViewComponent} from './starterview.component';
 import {LoginComponent} from './login.component';
+import {RegisterComponent} from './register.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,8 @@ import {LoginComponent} from './login.component';
     PeityModule,
     SparklineModule
   ],
-  declarations: [StarterViewComponent, LoginComponent],
-  exports: [StarterViewComponent, LoginComponent]
+  declarations: [StarterViewComponent, LoginComponent, RegisterComponent],
+  exports: [StarterViewComponent, LoginComponent, RegisterComponent]
 })
 export class AppviewsModule {
 }
