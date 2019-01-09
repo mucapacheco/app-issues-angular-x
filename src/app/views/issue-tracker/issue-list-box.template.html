@@ -6,10 +6,10 @@
         <a href="index.html">Home</a>
       </li>
       <li>
-        <a>App views</a>
+        <a>Inclusão de protocolo para o Mestrado</a>
       </li>
       <li class="active">
-        <strong>Issue list</strong>
+        <strong>Atividades</strong>
       </li>
     </ol>
   </div>
@@ -20,52 +20,61 @@
 
     <div class="col-lg-12 animated fadeInRight">
       <div class="mail-box-header">
-        <form method="get" action="index.html" class="float-right mail-search">
+        <div class="float-right mail-search">
           <div class="input-group">
-            <input type="text" class="form-control form-control-sm" name="search" placeholder="Search">
+            <button class="btn btn-white btn-sm" (click)="addAtividade()"><i class="fa fa-plus"></i></button>
           </div>
-        </form>
+        </div>
         <h2>
           Inclusão de protocolo para o Mestrado
         </h2>
-        <div class="mail-tools tooltip-demo m-t-md">
-          <div class="btn-group float-right">
-            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
-            <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
-
+      </div>
+      <div class="mail-box" >
+        <div *ngIf="!(data && data.length > 0)" (click)="addAtividade()">
+          <div class="alert alert-warning text-center">
+            Nenhuma atividade cadastrada. Clique <a class="alert-link" href="javascript:void(0)">aqui</a> para começar.
           </div>
         </div>
-      </div>
-      <div class="mail-box" style="padding-top: 20px">
-
-        <table class="table table-hover table-mail">
-          <tbody>
-          <tr class="unread">
-            <td class="check-mail">
-            </td>
-            <td class="text-center" width="90%">Atividade</td>
-            <td class="text-center">Estimativa</td>
-            <td class="text-center">Duração</td>
-            <td class="text-center">Tipo</td>
-            <td></td>
-          </tr>
-          <tr class="unread" *ngFor="let atividade of data; let item=index">
-            <td class="check-mail">
-              <button style="min-width: 34px;min-height: 30px;width:100%" (click)="atividade.concluido = !atividade.concluido;changed(atividade,'concluido')" [ngClass]="!atividade.concluido?'btn-white':'btn-success'" class="btn  btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-                <i class="fa fa-check" *ngIf="atividade.concluido"></i>
-              </button>
-            </td>
-            <td *ngFor="let item of ['atividade','estimativa','realizado','tipo']">
-              <div style="min-height: 30px;width:100%" contenteditable  class="btn btn-white btn-sm" [textContent]="atividade[item]"
-                   (input)="atividade[item]=$event.target.innerText;changed(atividade,item)">
-              </div>
-            </td>
-            <td>
-              <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <div *ngIf="data && data.length > 0" >
+          <table class="table table-hover table-mail">
+            <tbody>
+            <tr class="unread">
+              <td class="check-mail">
+              </td>
+              <td class="text-center" width="90%">Atividade</td>
+              <td class="text-center">Estimativa</td>
+              <td class="text-center">Duração</td>
+              <td class="text-center">Tipo</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="unread" *ngFor="let atividade of data; let id_atividade=index">
+              <td class="check-mail">
+                <button style="min-width: 34px;min-height: 30px;width:100%" (click)="atividade.concluido = !atividade.concluido;changed(atividade,'concluido')" [ngClass]="!atividade.concluido?'btn-white':'btn-success'" class="btn  btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
+                  <i class="fa fa-check" *ngIf="atividade.concluido"></i>
+                </button>
+              </td>
+              <td *ngFor="let item of ['atividade','estimativa','realizado']">
+                <div [attr.key]="item+'_'+id_atividade" [attr.tipo]="item" style="min-height: 30px;width:100%" contenteditable  class="btn btn-white btn-sm" [textContent]="atividade[item]"
+                     (input)="atividade[item]=$event.target.innerText;" (blur)="changed(atividade,item)">
+                </div>
+              </td>
+              <td>
+                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" (click)="atividade.tipo = nextTipo(atividade.tipo);changed(atividade,'tipo')" title="Mark as read">{{atividade.tipo}}</button>
+              </td>
+              <td>
+                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
+              </td>
+              <td>
+                <button class="btn btn-white btn-sm" (click)="removeItem(id_atividade)" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-trash"></i> </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="" style="padding: 0px 20px 20px 20px; text-align: right">
+            <button class="btn btn-white btn-sm" (click)="addAtividade()"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
