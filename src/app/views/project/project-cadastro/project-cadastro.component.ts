@@ -21,6 +21,11 @@ export class ProjectCadastroComponent implements OnInit {
   salvar() {
     if (true) {
       AppComponent.addToast({tipo: 'success', message: 'Salvo com sucesso', title: 'Salvo com sucesso'});
+
+      this.router.routeReuseStrategy.shouldReuseRoute = function () {
+        return false;
+      };
+
       this.router.navigate(['/issue-tracker/box']);
 
     }

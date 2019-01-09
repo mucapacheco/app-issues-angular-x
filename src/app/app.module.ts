@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 import {LayoutsModule} from './components/common/layouts/layouts.module';
 import {AppviewsModule} from './views/appviews/appviews.module';
@@ -43,11 +43,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         path: 'projects',
         loadChildren: './views/project/project.module#ProjectModule'
       },
-      {path: '**',  redirectTo: 'app/login'},
+      {path: '**', redirectTo: 'app/login'},
       {path: '', redirectTo: 'app/starterview', pathMatch: 'full'},
-    ])
+    ], {urlUpdateStrategy: 'deferred'})
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

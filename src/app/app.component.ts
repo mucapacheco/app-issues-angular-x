@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,18 @@ import {ToastrService} from 'ngx-toastr';
 export class AppComponent {
   title = 'app';
 
-  constructor(private toastr: ToastrService) {
-    this.processarFlashMessage();
+  static addToast(config) {
+    localStorage.setItem('toastr', JSON.stringify(config));
   }
 
+  constructor(private toastr: ToastrService, private router: Router) {
+    this.router.events.subscribe(
+      (event) => {
+        if (event instanceof NavigationEnd) {
+          this.processarFlashMessage();
+        }
+      });
+  }
 
   processarFlashMessage() {
     const toastr = JSON.parse(localStorage.getItem('toastr'));
@@ -24,8 +33,5 @@ export class AppComponent {
 
   }
 
-  static addToast(config) {
-    localStorage.setItem('toastr', JSON.stringify(config));
-  }
 
 }
