@@ -10,9 +10,11 @@ declare var jQuery: any;
 
 @Component({
   selector: 'app-issue-list-box',
-  templateUrl: 'issue-list-box.template.html'
+  templateUrl: 'issue-list-box.template.html',
+  host: {
+    '(document:keypress)': 'handleKeyboardEvent($event)'
+  }
 })
-
 export class IssueListBoxComponent {
 
   public tipos = ['DEV', 'TESTE', 'DEPLOY'];
@@ -30,6 +32,11 @@ export class IssueListBoxComponent {
     // {'concluido': false, 'estimativa': 12, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Teste'}
   ];
 
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.code === 'KeyM' && event.ctrlKey) {
+      this.addAtividade();
+    }
+  }
 
   changed(atividade, item) {
     console.log(atividade, item);
