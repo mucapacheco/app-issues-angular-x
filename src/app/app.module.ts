@@ -10,6 +10,8 @@ import {DashboardsModule} from './views/dashboards/dashboards.module';
 import {IssueTrackerModule} from './views/issue-tracker/issue-tracker.module';
 import {ProjectModule} from './views/project/project.module';
 import {ICheckModule} from './components/common/iCheck/iCheck.component';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import {ICheckModule} from './components/common/iCheck/iCheck.component';
     DashboardsModule,
     IssueTrackerModule,
     ProjectModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot([
       {
         path: 'app',

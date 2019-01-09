@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ToastrService} from 'ngx-toastr';
+import {AppComponent} from '../../../app.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-project-cadastro',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectCadastroComponent implements OnInit {
 
-  constructor() { }
+  public model: any = {};
+
+  constructor(private toastr: ToastrService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
+  salvar() {
+    if (true) {
+      AppComponent.addToast({tipo: 'success', message: 'Salvo com sucesso', title: 'Salvo com sucesso'});
+      this.router.navigate(['/issue-tracker/box']);
+
+    }
+
+
+  }
 }

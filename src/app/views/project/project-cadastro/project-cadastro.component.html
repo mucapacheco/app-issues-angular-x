@@ -24,9 +24,6 @@
         </div>
         <div class="ibox-content">
           <div class="row">
-            <div class="col-sm-12"><h4 class="m-t-none m-b">Nome</h4>
-              <div class="form-group"><input type="email" placeholder="Enter email" class="form-control"></div>
-            </div>
             <div class="col-sm-12"><h4 class="m-t-none m-b">Projeto Pai</h4>
               <div class="form-group">
                 <select class="form-control m-b">
@@ -34,20 +31,26 @@
                 </select>
               </div>
             </div>
+            <div class="col-sm-2"><h4 class="m-t-none m-b">Código</h4>
+              <div class="form-group"><input type="text" [(ngModel)]="model.label" placeholder="Código" class="form-control"></div>
+            </div>
+            <div class="col-sm-10"><h4 class="m-t-none m-b">Nome</h4>
+              <div class="form-group"><input type="text" [(ngModel)]="model.nome" placeholder="Nome" class="form-control"></div>
+            </div>
             <div class="col-sm-6 b-r"><h4 class="m-t-none m-b">Data inicial</h4>
-              <div class="form-group"><input type="date" class="form-control"/></div>
+              <div class="form-group"><input type="date" [(ngModel)]="model.data_inicial" class="form-control"/></div>
             </div>
             <div class="col-sm-6"><h4 class="m-t-none m-b">Data de término</h4>
-              <div class="form-group"><input type="date" class="form-control"/></div>
+              <div class="form-group"><input type="date" class="form-control" [(ngModel)]="model.data_termino" /></div>
             </div>
             <div class="col-sm-12"><h4 class="m-t-none m-b">Descrição</h4>
-              <div class="form-group"><textarea type="email" placeholder="Enter email" class="form-control"></textarea></div>
+              <div class="form-group"><textarea placeholder="Descricao" [(ngModel)]="model.descricao" class="form-control"></textarea></div>
             </div>
             <div class="col-sm-12">
               <div class="form-group row">
                 <div class="col-sm-12">
                   <button class="btn btn-white btn-sm" type="submit" style="margin-right: 10px">Cancel</button>
-                  <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+                  <button class="btn btn-primary btn-sm" type="submit" (click)="salvar()">Save changes</button>
                 </div>
               </div>
             </div>
