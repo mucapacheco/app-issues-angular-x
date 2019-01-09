@@ -22,16 +22,11 @@
       <div class="mail-box-header">
         <form method="get" action="index.html" class="float-right mail-search">
           <div class="input-group">
-            <input type="text" class="form-control form-control-sm" name="search" placeholder="Search email">
-            <div class="input-group-btn">
-              <button type="submit" class="btn btn-sm btn-primary">
-                Search
-              </button>
-            </div>
+            <input type="text" class="form-control form-control-sm" name="search" placeholder="Search">
           </div>
         </form>
         <h2>
-          Inbox (16)
+          Inclusão de protocolo para o Mestrado
         </h2>
         <div class="mail-tools tooltip-demo m-t-md">
           <div class="btn-group float-right">
@@ -54,30 +49,15 @@
             <td class="text-center">Tipo</td>
             <td></td>
           </tr>
-          <tr class="unread" *ngFor="let item of [0,1,2,3,4,5]">
+          <tr class="unread" *ngFor="let atividade of data; let item=index">
             <td class="check-mail">
-              <button style="min-height: 30px;width:100%" contenteditable [ngClass]="item !== 0?'btn-white':'btn-success'" class="btn  btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-                <i class="fa fa-check" *ngIf="item === 0"></i>
+              <button style="min-width: 34px;min-height: 30px;width:100%" (click)="atividade.concluido = !atividade.concluido;changed(atividade,'concluido')" [ngClass]="!atividade.concluido?'btn-white':'btn-success'" class="btn  btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
+                <i class="fa fa-check" *ngIf="atividade.concluido"></i>
               </button>
             </td>
-            <td>
-              <div  style="min-height: 30px;width:100%" contenteditable class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-                Inclusão de protocolo para o Mestrado
-              </div>
-            </td>
-            <td>
-              <div style="min-height: 30px;width:100%" contenteditable class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-                8
-              </div>
-            </td>
-            <td>
-              <div style="min-height: 30px;width:100%" contenteditable class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-                32
-              </div>
-            </td>
-            <td>
-              <div style="min-height: 30px;width:100%" contenteditable class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read">
-              DEV
+            <td *ngFor="let item of ['atividade','estimativa','realizado','tipo']">
+              <div style="min-height: 30px;width:100%" contenteditable  class="btn btn-white btn-sm" [textContent]="atividade[item]"
+                   (input)="atividade[item]=$event.target.innerText;changed(atividade,item)">
               </div>
             </td>
             <td>
