@@ -27,7 +27,6 @@ export class AppComponent {
   processarFlashMessage() {
     const toastr = JSON.parse(localStorage.getItem('toastr'));
     if (toastr) {
-      this.toastr.toastrConfig.disableTimeOut = true;
       this.toastr[toastr.tipo](toastr.message, toastr.title);
       localStorage.removeItem('toastr');
     }
