@@ -27,6 +27,7 @@ export class ProjectListComponent {
         nome: 'Sprint 0' + a,
         data_inicial: '01/0' + a + '/2019',
         data_termino: '30/0' + a + '/2019',
+        alias_subprojeto: 'Produtos',
         abertas: Math.floor((Math.random() * 20) + 1),
         concluidas: Math.floor((Math.random() * 20) + 1),
         descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when' +
@@ -45,28 +46,28 @@ export class ProjectListComponent {
             concluidas: Math.floor((Math.random() * 20) + 1),
             abertas: Math.floor((Math.random() * 20) + 1),
             statusCod: 1,
-            status: 'Desenvolvimento'
+            status: 'Em Desenvolvimento'
           },
           {
             nome: 'Regra para renovação de matrícula',
             concluidas: Math.floor((Math.random() * 20) + 1),
             abertas: Math.floor((Math.random() * 20) + 1),
             statusCod: 3,
-            status: 'Testes'
+            status: 'Em Testes'
           },
           {
             nome: 'Software para controle de projetos',
             concluidas: Math.floor((Math.random() * 20) + 1),
             abertas: Math.floor((Math.random() * 20) + 1),
             statusCod: 2,
-            status: 'Desenvolvimento'
+            status: 'Em Desenvolvimento'
           },
           {
             nome: 'Inclusão de protocolo para o Mestrado',
             concluidas: Math.floor((Math.random() * 20) + 1),
             abertas: Math.floor((Math.random() * 20) + 1),
             statusCod: 3,
-            status: 'Testes'
+            status: 'Em Testes'
           },
           {
             nome: 'Protótipo da tela de matrícula do aluno da Graduação no Saga Online',

@@ -20,16 +20,16 @@ export class IssueListBoxComponent {
   public tipos = ['DEV', 'TESTE', 'DEPLOY'];
 
   public data: any = [
-    // {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Usuários'},
-    // {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Sprints'},
-    // {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Projetos'},
-    // {'concluido': true, 'estimativa': 16, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Tarefas'},
-    // {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Usuários'},
-    // {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Sprints'},
-    // {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Projetos'},
-    // {'concluido': false, 'estimativa': 12, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Tarefas'},
-    // {'concluido': false, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Deploy'},
-    // {'concluido': false, 'estimativa': 12, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Teste'}
+    {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Usuários'},
+    {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Sprints'},
+    {'concluido': true, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Projetos'},
+    {'concluido': true, 'estimativa': 16, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Protótipo da Tela de Tarefas'},
+    {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Usuários'},
+    {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Sprints'},
+    {'concluido': true, 'estimativa': 8, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Projetos'},
+    {'concluido': false, 'estimativa': 12, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Tela de Tarefas'},
+    {'concluido': false, 'estimativa': 4, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Deploy'},
+    {'concluido': false, 'estimativa': 12, 'tipo': 'DEV', 'realizado': null, 'atividade': 'Teste'}
   ];
 
   handleKeyboardEvent(event: KeyboardEvent) {

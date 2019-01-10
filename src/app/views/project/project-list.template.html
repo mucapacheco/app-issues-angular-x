@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">
-    <h2>Projetos</h2>
+    <h2>Projetos / Sprints</h2>
     <ol class="breadcrumb">
       <li>
         <a href="index.html">Home</a>
@@ -9,7 +9,7 @@
         Projetos
       </li>
       <li class="active">
-        <strong>Projetos - Nível 1</strong>
+        <strong>Sprints</strong>
       </li>
     </ol>
   </div>
@@ -35,15 +35,15 @@
             {{project.descricao}}
           </p>
           <div>
-            <h2 style="margin: 0"><small>Sub Projetos</small></h2>
+            <h2 style="margin: 0"><small>Produtos</small></h2>
             <ul class="list-group clear-list">
               <li tooltip="{{subprojeto.status}}"
                   [tooltipDisabled]="false"
                   [tooltipAnimation]="true"
                   tooltipPlacement="top" class="list-group-item"  style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" *ngFor="let subprojeto of project.subprojetos">
-                                <div class="float-right text-right" style="min-width: 40px">
-                                    {{subprojeto.abertas}}/{{subprojeto.abertas+subprojeto.concluidas}}
-                                </div>
+                      <div class="float-right text-right" style="min-width: 40px;z-index: 9999;position: relative;">
+                         <a [routerLink]="['/issue-tracker/box']">{{subprojeto.abertas}}/{{subprojeto.abertas+subprojeto.concluidas}}</a>
+                      </div>
                 <span class="label"  [ngClass]="getClassLabelStatus(subprojeto.statusCod)"><i [ngClass]="getClassIconStatus(subprojeto.statusCod)"></i></span>
                 <span style="margin: 0 10px">{{subprojeto.nome}}</span>
               </li>
