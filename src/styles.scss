@@ -1,2 +1,6 @@
 /* Import main Inspinia style */
 @import "assets/styles/style";
+#toast-container > .toast-success:before {
+  content: "\f00C";
+  display: none;
+}

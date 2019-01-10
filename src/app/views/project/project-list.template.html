@@ -16,7 +16,7 @@
   <div class="col-lg-2"></div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
-  <div class="text-right" style="padding-bottom: 10px"><button class="btn btn-default btn-sm dim" [routerLink]="['/projects/cadastro']">
+  <div class="text-right" style="padding-bottom: 10px"><button class="btn btn-default btn-sm " [routerLink]="['/projects/cadastro']">
     <i class="fa fa-plus"></i>
     Novo Projeto</button></div>
   <div class="row">
@@ -50,7 +50,7 @@
               <div class="font-bold">Concluídas</div>
               {{project.concluidas}}
             </div>
-            <div class="col-sm-4 text-right text-danger">
+            <div class="col-sm-4 text-right" [ngClass]="project.concluidas*100/(project.abertas + project.concluidas) < 50?'text-danger':'text-primary'">
               <div class="font-bold">Atividades</div>
               <i class="fa fa-user-clock "></i> {{project.abertas + project.concluidas}}
             </div>
