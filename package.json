@@ -34,6 +34,7 @@
     "ng2-charts": "^1.5.0",
     "ngx-bootstrap": "^1.6.6",
     "ngx-toastr": "^9.1.1",
+    "ngx-tooltip": "0.0.9",
     "peity": "^3.2.1",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.3",

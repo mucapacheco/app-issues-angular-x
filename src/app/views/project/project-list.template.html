@@ -37,7 +37,10 @@
           <div>
             <h2 style="margin: 0"><small>Sub Projetos</small></h2>
             <ul class="list-group clear-list">
-              <li class="list-group-item" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" *ngFor="let subprojeto of project.subprojetos">
+              <li tooltip="{{subprojeto.status}}"
+                  [tooltipDisabled]="false"
+                  [tooltipAnimation]="true"
+                  tooltipPlacement="top" class="list-group-item"  style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" *ngFor="let subprojeto of project.subprojetos">
                                 <div class="float-right text-right" style="min-width: 40px">
                                     {{subprojeto.abertas}}/{{subprojeto.abertas+subprojeto.concluidas}}
                                 </div>
