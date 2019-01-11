@@ -1,0 +1,78 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Projetos / Sprints</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        Projetos
+      </li>
+      <li class="active">
+        <strong>Sprints</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="text-right" style="padding-bottom: 10px"><button class="btn btn-default btn-sm " [routerLink]="['/projects/cadastro']">
+    <i class="fa fa-plus"></i>
+    Novo Projeto</button></div>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let project of projetos">
+      <div class="ibox" >
+        <div class="ibox-title">
+          <span class="label label-default float-right">{{project.data_inicial}} - {{project.data_inicial}}</span>
+          <h5>{{project.label}} - {{project.nome}}</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="team-members">
+            <a href="#" *ngFor="let usuario of project.usuarios"><img alt="member" class="rounded-circle" src="assets/images/a{{usuario}}.jpg"></a>
+          </div>
+          <h4>Descrição</h4>
+          <p>
+            {{project.descricao}}
+          </p>
+          <div>
+            <h2 style="margin: 0"><small>Produtos</small></h2>
+            <ul class="list-group clear-list">
+              <li tooltip="{{subprojeto.status}}"
+                  [tooltipDisabled]="false"
+                  [tooltipAnimation]="true"
+                  tooltipPlacement="top" class="list-group-item"  style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" *ngFor="let subprojeto of project.subprojetos">
+                      <div class="float-right text-right" style="min-width: 40px;z-index: 9999;position: relative;">
+                         <a [routerLink]="['/issue-tracker/box']">{{subprojeto.abertas}}/{{subprojeto.abertas+subprojeto.concluidas}}</a>
+                      </div>
+                <span class="label"  [ngClass]="getClassLabelStatus(subprojeto.statusCod)"><i [ngClass]="getClassIconStatus(subprojeto.statusCod)"></i></span>
+                <span style="margin: 0 10px">{{subprojeto.nome}}</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span>Status do Projeto:</span>
+            <div class="stat-percent">{{project.concluidas*100/(project.abertas + project.concluidas)| number:'1.0-0'}}%</div>
+            <div class="progress progress-mini">
+              <div [style.width]="project.concluidas*100/(project.abertas + project.concluidas)+'%'" [ngClass]="project.concluidas*100/(project.abertas + project.concluidas) < 50?'progress-bar-danger':''" class="progress-bar"></div>
+            </div>
+          </div>
+          <div class="row  m-t-sm">
+            <div class="col-sm-4">
+              <div class="font-bold">Abertas</div>
+              {{project.abertas}}
+            </div>
+            <div class="col-sm-4">
+              <div class="font-bold">Concluídas</div>
+              {{project.concluidas}}
+            </div>
+            <div class="col-sm-4 text-right" [ngClass]="project.concluidas*100/(project.abertas + project.concluidas) < 50?'text-danger':'text-primary'">
+              <div class="font-bold">Atividades</div>
+              <i class="fa fa-user-clock "></i> {{project.abertas + project.concluidas}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -113,4 +113,15 @@ export class ProjectListComponent {
       return 'fa fa-check';
     }
   }
+
+  getClassFormato(i) {
+    if (i == 0) {
+      return '#1c84c6';
+    }
+    if (i == 1) {
+      return '#1c84c6';
+    }
+
+    return '#f8ac59';
+  }
 }
