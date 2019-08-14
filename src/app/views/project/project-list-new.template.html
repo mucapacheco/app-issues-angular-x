@@ -1,0 +1,83 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Projetos / Sprints</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        Projetos
+      </li>
+      <li class="active">
+        <strong>Sprints</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox ">
+          <div class="ibox-title" style="background: rgb(248, 172, 89); color: #ffffff">
+            <h5>Módulo de Suplementos</h5>
+          </div>
+          <div class="ibox-content ibox-heading" style="background: #FFFFFF">
+            <div class="row">
+              <div class="col-md-2 text-left">
+                Nota: 10
+              </div>
+              <div class="col-md-2 text-center">
+                BS Ano2011-Sem2
+              </div>
+              <div class="col-md-2 text-right">
+                CH Total: 400
+              </div>
+              <div class="col-md-2 text-right">
+                CH Total: 400
+              </div>
+
+            </div>
+
+          </div>
+          <div class="ibox-content">
+            <div class="row">
+              <div class="col-md-3" *ngFor="let i of [0,1,2,3,4,5,69,7,9,8]">
+                <div class="ibox">
+                  <div class="ibox-content product-box">
+                    <div class="product-desc">
+                                <span class="product-price"  [style.background-color]="getClassFormato(i)" style="top: 0;">
+                                    40h
+                                </span>
+                      <small class="text-muted" [style.color]="getClassFormato(i)">{{i > 1?'Online':'Presencial'}}</small>
+                      <a href="#" class="product-name">GFLO0001 - Integração de Suprimentos </a>
+                      <div class="m-t text-righ"  style="height: 24px;">
+                        <div *ngIf="!(i > 1)">
+                          <a href="#" class="btn btn-xs btn-outline btn-default" style="width: 100%">
+                            <div style="float: left">
+                              Calos Magno da Fonseca
+                            </div>
+                            <div style="float: right">
+                              <img width="20px" alt="image" class="img-circle" src="assets/images/profile_small.jpg">
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="clearfix">
+                        <div class="text-right text-navy" style="margin-top: 10px">
+                          <small><i class="fas fa-thumbs-up"></i> Aprovado</small>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
